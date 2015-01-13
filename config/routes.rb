@@ -1,4 +1,5 @@
 Odot::Application.routes.draw do
+  #This represents the routing rule that maps todo_list URIs to actions in the todo_lists controller
   resources :todo_lists
   root 'todo_lists#index'
   # The priority is based upon order of creation: first created -> highest priority.
