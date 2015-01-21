@@ -2,7 +2,11 @@ Odot::Application.routes.draw do
   #get "todo_items/index"
   #This represents the routing rule that maps todo_list URIs to actions in the todo_lists controller
   resources :todo_lists do
-    resources :todo_items
+    resources :todo_items do
+      member do
+        patch :complete
+      end
+    end
   end
   root 'todo_lists#index'
   # The priority is based upon order of creation: first created -> highest priority.
